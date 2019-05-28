@@ -30,7 +30,11 @@ class ShoppingViewController: UIViewController {
     }
     
     func setAmount() {
-        taxesCalculator.dolar = Double(textFieldDolar.text!)!
+        taxesCalculator.shoppingValue = taxesCalculator.convertToDouble(textFieldDolar.text!)
+        labelReal.text = taxesCalculator.getFormatedValue(of: taxesCalculator.shoppingValue * taxesCalculator.dolar, withCurrency: "R$ ")
+        
+        let dolar = taxesCalculator.getFormatedValue(of: taxesCalculator.dolar, withCurrency: "")
+        labelRealDescription.text = "Valor sem impostos (dólar \(dolar))"
     }
 
 }

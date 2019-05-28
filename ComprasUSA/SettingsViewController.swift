@@ -16,18 +16,24 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        textFieldDolar.text = taxesCalculator.getFormatedValue(of: taxesCalculator.dolar, withCurrency: "")
+        textFieldIOF.text = taxesCalculator.getFormatedValue(of: taxesCalculator.iof, withCurrency: "")
+        textFieldStateTaxes.text = taxesCalculator.getFormatedValue(of: taxesCalculator.stateTax, withCurrency: "")
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
-    */
+    
+    func setValues() {
+        taxesCalculator.dolar = taxesCalculator.convertToDouble(textFieldDolar.text!)
+        taxesCalculator.iof = taxesCalculator.convertToDouble(textFieldIOF.text!)
+        taxesCalculator.stateTax = taxesCalculator.convertToDouble(textFieldStateTaxes.text!)
+    }
+}
 
+extension SettingsViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        setValues()
+    }
 }

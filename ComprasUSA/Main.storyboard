@@ -122,6 +122,11 @@
                         </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Compras" image="bag" id="vxB-Vn-J8I"/>
+                    <connections>
+                        <outlet property="labelReal" destination="MuJ-BK-wUw" id="laP-7D-CLD"/>
+                        <outlet property="labelRealDescription" destination="8dX-YL-abe" id="a6U-wi-yJ7"/>
+                        <outlet property="textFieldDolar" destination="XAv-1I-zct" id="Agq-uy-q81"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ebI-CB-9uh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -215,6 +220,11 @@
                     <tabBarItem key="tabBarItem" title="Configurações" image="settings" id="Xod-r1-k6w">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="textFieldDolar" destination="VKv-au-SZ7" id="5J0-8U-jo4"/>
+                        <outlet property="textFieldIOF" destination="Qzb-2t-F5L" id="ej9-z1-mi9"/>
+                        <outlet property="textFieldStateTaxes" destination="yUP-dg-wXc" id="2gK-WA-YYu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="coh-6w-Aph" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -383,6 +393,15 @@
                     <tabBarItem key="tabBarItem" title="Impostos" image="taxes" id="9pF-zb-lwn">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="labelDolar" destination="bB9-Qu-OpE" id="P7f-sz-oGL"/>
+                        <outlet property="labelIOF" destination="HdM-xB-gUM" id="hKo-f4-aQb"/>
+                        <outlet property="labelIOFDescription" destination="jMd-xC-Lxq" id="bQj-Cs-ZXI"/>
+                        <outlet property="labelReal" destination="bT4-fT-Uic" id="Ujx-KA-m5S"/>
+                        <outlet property="labelStateTax" destination="jxG-XA-h1x" id="OLO-s3-mEb"/>
+                        <outlet property="labelStateTaxDescription" destination="TAE-OS-dTg" id="uN1-sN-N1U"/>
+                        <outlet property="switchCreditCard" destination="BtF-cp-0wm" id="T8q-c0-YoR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JED-cX-p22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
